@@ -29,3 +29,5 @@ class HomePage(TemplateView):
         context['cured'] = numbers[3]
         return context
 
+# just for test
+
