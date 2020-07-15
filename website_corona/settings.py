@@ -56,7 +56,7 @@ ROOT_URLCONF = 'website_corona.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [STATICFILES_DIR],
+        'DIRS': [TEMPLATE_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,3 +126,24 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     STATICFILES_DIR,
 ]
+
+
+# Email handling
+EMAIL_HOST = 'smtp-relay.sendinblue.com'
+EMAIL_HOST_PASSWORD = 'OtLbmyRkHMY0Kds8'
+EMAIL_HOST_USER = 'patojezkopotocny@gmail.com'
+EMAIL_PORT = 587
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+
+
+
+
+
+
+
+
+
+
+
+

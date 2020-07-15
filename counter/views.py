@@ -1,5 +1,7 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, CreateView
+from counter.forms import SubscriberForm
+from counter.models import Subscriber
 
 # BS4 web scrraping imports
 from bs4 import BeautifulSoup
@@ -29,4 +31,13 @@ class HomePage(TemplateView):
         context['cured'] = numbers[3]
         return context
 
+class SignUp(CreateView):
+    model = Subscriber
+    fields = ('name', 'email')
+    template_name = 'accounts/signup.html'
+    success_url = 'thanks/'
+
+
+class ThanksPage(TemplateView):
+    template_name = 'accounts/thanks.html'
 

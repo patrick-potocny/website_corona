@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block sidebar %}
+<h1><a href="{% url 'counter:email_request' %}">Subscribe</a></h1>
+{% endblock %}
+
+{% block content %}
+  <h1>Current Statictics:</h1>
+          <h3>Tested: {{ tested }}</h3>
+          <h3>Confirmed: {{ confirmed }}</h3>
+          <h3>Confirmed today: {{ confirmed_today }}</h3>
+          <h3>Deaths: {{ deaths }}</h3>
+          <h3>Cured: {{ cured }}</h3>
+{% endblock %}
