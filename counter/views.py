@@ -31,6 +31,7 @@ class HomePage(TemplateView):
         context['cured'] = numbers[3]
         return context
 
+
 class SignUp(CreateView):
     model = Subscriber
     fields = ('name', 'email')
